@@ -8,7 +8,7 @@ $(function () {
             title: '提示'
         }, function (index) {
             localStorage.removeItem('token')
-            location.href = './login.html'
+            location.href = '/login.html'
             layer.close(index);
         });
     })
