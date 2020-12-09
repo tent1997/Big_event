@@ -17,7 +17,7 @@ function initInfo() {
             if (res.status !== 0) {
                 return layui.layer.msg(res.message)
             }
-            console.log(res.data);
+            // console.log(res.data);
             form.val('form_userinfo',res.data)
         }
     })

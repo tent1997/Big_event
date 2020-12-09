@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>大事件首页</title>
-    <link rel="stylesheet" href='./assets/lib/layui/css/layui.css'>
-    <link rel="stylesheet" href="./assets/fonts/iconfont.css">
-    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href='/assets/lib/layui/css/layui.css'>
+    <link rel="stylesheet" href="/assets/fonts/iconfont.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
 
 </head>
 
@@ -15,19 +15,19 @@
     <div class="layui-layout layui-layout-admin">
         <div class="layui-header">
             <div class="layui-logo">
-                <img src="./assets/images/logo.png" alt="">
+                <img src="/assets/images/logo.png" alt="">
             </div>
             <ul class="layui-nav layui-layout-right">
                 <li class="layui-nav-item">
                     <a href="javascript:;" id='welcome'>
-                        <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
-                        <span class="text-avatar">A</span>
-                        <span>个人中心</span>
+                        <img src="http://t.cn/RCzsdCq" class="layui-nav-img" style="display: none;">
+                        <span class="text-avatar" style="display: none;">A</span>
+                        <span style="font-size: 12px;">个人中心</span>
                     </a>
                     <dl class="layui-nav-child">
-                        <dd><a href="">基本资料</a></dd>
-                        <dd><a href="">更换头像</a></dd>
-                        <dd><a href="">重置密码</a></dd>
+                        <dd><a href="/user/user_info.html" target="fm">基本资料</a></dd>
+                        <dd><a href="/user/user_avatar.html" target="fm">更换头像</a></dd>
+                        <dd><a href="/user/user_pwd.html" target="fm">重置密码</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item" id='loginout'>
@@ -41,8 +41,8 @@
                 <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
                 <div class="layui-nav-item" id='info'>
                     <a href="javascript:;" id='welcome'>
-                        <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
-                        <span class="text-avatar">A</span>
+                        <img src="http://t.cn/RCzsdCq" class="layui-nav-img" style="display: none;">
+                        <span class="text-avatar" style="display: none;">A</span>
                         <span class="first">欢迎 ***</span>
                     </a>
                 </div>
@@ -55,9 +55,9 @@
                         <a class="" href="javascript:;">
                             <span class="iconfont icon-16"></span>文章管理</a>
                         <dl class="layui-nav-child">
-                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>列表一</a></dd>
-                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>列表二</a></dd>
-                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>列表三</a></dd>
+                            <dd><a href="/assets/article/art_cate.html" target="fm"><i class="layui-icon layui-icon-app"></i>文章类别</a></dd>
+                            <dd><a href="/assets/article/art_list.html" target="fm"><i class="layui-icon layui-icon-app"></i>文章列表</a></dd>
+                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>发布文章</a></dd>
                         </dl>
                     </li>
                     <li class="layui-nav-item">

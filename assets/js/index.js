@@ -30,12 +30,13 @@ function getUserInfo() {
 function renderAvatar(user) {
     // $('.text-avatar')[0].show()  
     // $('.layui-nav-img').hide()
+    // console.log(user);
     var uname = user.nickname || user.username
-    if (user.user_pic !== null) {
-        $('.layui-nav-img').attr('src', user.user_pic).show()
+    if (user.user_pic !== 'null') {
+        $('.layui-nav-img').prop('src', user.user_pic).show()
         $('.text-avatar').hide()
     } else {
-        $('.layui-nav-img').hide()
+        $('.layui-nav-img').attr('src', user.user_pic).hide()
         $('.text-avatar').show()
         $('.text-avatar').html(uname[0].toUpperCase())
     }
