@@ -1,4 +1,5 @@
 $(function () {
+  // $('#image').prop('src', localStorage.getItem('avatar'))
   $.ajax({
     method: 'GET',
     url: '/my/userinfo',
@@ -25,6 +26,7 @@ $image.cropper(options)
 $('#updata').click(function () {
   $('#file').click()
 })
+// var avatarURL = $('#image').attr('src')
 $('#file').change(function (e) {
   // console.log(e);
   // 获取选择图片的详细信息 log(e) 找一下files
@@ -34,8 +36,11 @@ $('#file').change(function (e) {
   }
   // 利用URL创建一个url地址 URL.createObjectURL(文件的名字.jpg之类的)
   var avatarURL = URL.createObjectURL(files[0])
-  $('#image').cropper('destroy').attr('src', avatarURL).cropper(options)
+  console.log(avatarURL);
+  // $('#image').cropper('destroy').attr('src', avatarURL).cropper(options)
+  // localStorage.setItem('avatar',avatarURL)
 })
+
 $('#sure').click(function () {
   var dataURL = $image
     .cropper('getCroppedCanvas', {

@@ -15,6 +15,7 @@ $(function () {
 })
 
 function getUserInfo() {
+    console.log(URL);
     $.ajax({
         method: 'GET',
         url: '/my/userinfo',
@@ -31,10 +32,13 @@ function renderAvatar(user) {
     // $('.text-avatar')[0].show()  
     // $('.layui-nav-img').hide()
     // console.log(user);
+    // $('.layui-nav-img').attr('avatar', '123')
+    // console.log($('.layui-nav-img').attr('avatar'));
     var uname = user.nickname || user.username
     if (user.user_pic !== 'null') {
         $('.layui-nav-img').prop('src', user.user_pic).show()
         $('.text-avatar').hide()
+        // console.log(localStorage.getItem('avatar'));
     } else {
         $('.layui-nav-img').attr('src', user.user_pic).hide()
         $('.text-avatar').show()
